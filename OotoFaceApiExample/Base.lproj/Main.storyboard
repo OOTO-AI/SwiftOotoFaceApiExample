@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OotoFaceApiExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="IV1" userLabel="photoImageView">
+                                <rect key="frame" x="20" y="100" width="353" height="340"/>
+                            </imageView>
+                            <label contentMode="scaleToFill" text="" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LBL1" userLabel="resultLabel">
+                                <rect key="frame" x="20" y="450" width="353" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTN1" userLabel="takePhotoButton">
+                                <rect key="frame" x="20.000000000000007" y="470" width="107.66666666666669" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jjg-YG-Bdd"/>
+                                </constraints>
+                                <state key="normal" title="Take photo"/>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTN2" userLabel="enrollButton">
+                                <rect key="frame" x="142.66666666666666" y="470" width="107.66666666666666" height="44"/>
+                                <state key="normal" title="Enroll"/>
+                            </button>
+                            <button contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTN4" userLabel="searchButton">
+                                <rect key="frame" x="265.33333333333331" y="470" width="107.66666666666669" height="44"/>
+                                <state key="normal" title="Search"/>
+                            </button>
+                            <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTN3" userLabel="deleteButton">
+                                <rect key="frame" x="20" y="524" width="353" height="44"/>
+                                <state key="normal" title="Delete"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SA1"/>
+                        <constraints>
+                            <constraint firstItem="BTN1" firstAttribute="firstBaseline" secondItem="BTN2" secondAttribute="firstBaseline" id="Rne-n0-20C"/>
+                            <constraint firstItem="IV1" firstAttribute="top" secondItem="V1" secondAttribute="top" constant="100" id="c1"/>
+                            <constraint firstItem="BTN2" firstAttribute="leading" secondItem="BTN1" secondAttribute="trailing" constant="15" id="c11"/>
+                            <constraint firstItem="BTN2" firstAttribute="width" secondItem="BTN1" secondAttribute="width" id="c12"/>
+                            <constraint firstItem="BTN4" firstAttribute="top" secondItem="LBL1" secondAttribute="bottom" constant="20" id="c13"/>
+                            <constraint firstItem="BTN4" firstAttribute="leading" secondItem="BTN2" secondAttribute="trailing" constant="15" id="c14"/>
+                            <constraint firstAttribute="trailing" secondItem="BTN4" secondAttribute="trailing" constant="20" id="c15"/>
+                            <constraint firstItem="BTN4" firstAttribute="width" secondItem="BTN1" secondAttribute="width" id="c16"/>
+                            <constraint firstItem="BTN1" firstAttribute="baseline" secondItem="BTN4" secondAttribute="baseline" id="c17"/>
+                            <constraint firstItem="IV1" firstAttribute="leading" secondItem="V1" secondAttribute="leading" constant="20" id="c2"/>
+                            <constraint firstAttribute="trailing" secondItem="IV1" secondAttribute="trailing" constant="20" id="c3"/>
+                            <constraint firstItem="LBL1" firstAttribute="top" secondItem="IV1" secondAttribute="bottom" constant="10" id="c4"/>
+                            <constraint firstItem="LBL1" firstAttribute="leading" secondItem="IV1" secondAttribute="leading" id="c5"/>
+                            <constraint firstAttribute="trailing" secondItem="LBL1" secondAttribute="trailing" constant="20" id="c6"/>
+                            <constraint firstItem="BTN1" firstAttribute="top" secondItem="LBL1" secondAttribute="bottom" constant="20" id="c7"/>
+                            <constraint firstItem="BTN1" firstAttribute="leading" secondItem="IV1" secondAttribute="leading" id="c8"/>
+                            <constraint firstItem="BTN2" firstAttribute="top" secondItem="LBL1" secondAttribute="bottom" constant="20" id="c9"/>
+                            <constraint firstItem="BTN3" firstAttribute="top" secondItem="BTN1" secondAttribute="bottom" constant="10" id="cd1"/>
+                            <constraint firstItem="BTN3" firstAttribute="leading" secondItem="IV1" secondAttribute="leading" id="cd2"/>
+                            <constraint firstAttribute="trailing" secondItem="BTN3" secondAttribute="trailing" constant="20" id="cd3"/>
+                            <constraint firstItem="BTN3" firstAttribute="height" constant="44" id="cd4"/>
+                            <constraint firstItem="BTN1" firstAttribute="baseline" secondItem="BTN2" secondAttribute="baseline" id="hBE-On-Ej0"/>
+                            <constraint firstItem="SA1" firstAttribute="bottom" secondItem="BTN1" secondAttribute="bottom" constant="270" id="pYM-m4-jgO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="BTN3" id="OC5"/>
+                        <outlet property="enrollButton" destination="BTN2" id="OC4"/>
+                        <outlet property="photoImageView" destination="IV1" id="OC1"/>
+                        <outlet property="resultLabel" destination="LBL1" id="OC2"/>
+                        <outlet property="searchButton" destination="BTN4" id="OC6"/>
+                        <outlet property="takePhotoButton" destination="BTN1" id="OC3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137" y="152"/>
         </scene>
     </scenes>
 </document>

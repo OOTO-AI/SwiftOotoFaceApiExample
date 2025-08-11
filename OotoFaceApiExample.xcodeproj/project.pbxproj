@@ -48,16 +48,6 @@
 			path = OotoFaceApiExample;
 			sourceTree = "<group>";
 		};
-		9681204F2E43973900B7979C /* OotoFaceApiExampleTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OotoFaceApiExampleTests;
-			sourceTree = "<group>";
-		};
-		968120592E43973900B7979C /* OotoFaceApiExampleUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OotoFaceApiExampleUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				968120382E43973600B7979C /* OotoFaceApiExample */,
-				9681204F2E43973900B7979C /* OotoFaceApiExampleTests */,
-				968120592E43973900B7979C /* OotoFaceApiExampleUITests */,
 				968120372E43973600B7979C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +131,6 @@
 			dependencies = (
 				9681204E2E43973900B7979C /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				9681204F2E43973900B7979C /* OotoFaceApiExampleTests */,
-			);
 			name = OotoFaceApiExampleTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +150,6 @@
 			);
 			dependencies = (
 				968120582E43973900B7979C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				968120592E43973900B7979C /* OotoFaceApiExampleUITests */,
 			);
 			name = OotoFaceApiExampleUITests;
 			packageProductDependencies = (
